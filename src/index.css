@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app-logo {
+  height: 32px;
+  margin: 16px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.user-avatar {
+  margin-right: 8px;
+}
+
+.ant-layout-sider-collapsed .app-logo span {
+  display: none;
+}
+
+.ant-menu-item .anticon {
+  font-size: 18px;
+}
+
+/* Custom styles for Tasbeeh counter */
+.counter-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.counter-circle:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.counter-circle-inner {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.counter-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+.counter-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Prayer times styles */
+.prayer-time-card {
+  margin-bottom: 16px;
+}
+
+.prayer-time-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.prayer-time-row:last-child {
+  border-bottom: none;
+}
+
+.prayer-name {
+  font-weight: 500;
+}
+
+.prayer-time {
+  font-weight: 600;
+  color: #1e8e3e;
+}
+
+/* Islamic calendar styles */
+.islamic-date {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f6f8fa;
+}
+
+.islamic-date-gregorian {
+  font-size: 16px;
+  color: #666;
+}
+
+.islamic-date-hijri {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e8e3e;
+  margin-top: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .counter-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .counter-circle-inner {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .counter-number {
+    font-size: 40px;
+  }
+}

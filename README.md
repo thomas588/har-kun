@@ -1,75 +1,111 @@
 # Har Kun
 
-Har Kun - это многофункциональное веб-приложение, доступное через Telegram, объединяющее множество полезных инструментов для повседневного использования.
+Har Kun is an ecosystem of mini-applications designed to be used daily through Telegram Mini-WebApp platform.
 
-## Текущие приложения
+## Project Overview
 
-- **Tasbeeh** (📿): Электронные счетчики для зикра
-- **Hisob** (🧮): Калькулятор и финансовые инструменты
-- **Ta'lim** (🎓): Образовательные материалы и курсы
-- **Bozor** (🛒): Управление покупками
-- **Kutubxona** (📚): Электронная библиотека
-- **Taomnoma** (🍲): Рецепты и кулинария
-- **Intizom** (📋): Планирование и организация
-- **Mashg'ulot** (🏋️): Упражнения и фитнес
-- **Tabobat** (💊): Здоровье и медицина
-- **Fayllar** (📁): Управление файлами
-- **Transport** (🚌): Информация о транспорте
-- **Ob-havo** (🌤️): Прогноз погоды
-- **Yangiliklar** (📰): Новости
-- **So'zma So'z** (💬): Языковые инструменты и переводчик
-- **Sayohat** (🧳): Путешествия и туризм
+The main idea of this ecosystem is to create a network of mini-applications that users will use throughout the day, every day. These mini-applications operate on the Telegram Mini-WebApp platform and are presented as a Telegram bot.
 
-## Установка и запуск
+Each mini-application performs a specific task within a limited scope, making the user experience streamlined and focused.
 
-1. Клонировать репозиторий:
+## Architecture
+
+All mini-applications work with a centralized database that stores basic user information, global configurations, and subscription information. For their specific tasks, each mini-application works with a dedicated table that references the centralized tables.
+
+The structure of the application relationship includes one unified application that provides access to each mini-application, while each mini-application also maintains autonomy from the unified application.
+
+## Features
+
+### Community Features
+- Anonymous leaderboards to track user progress without exposing personal information
+- Option to show/hide user from leaderboards and other lists
+
+### Data Sharing
+- Ability to share statistical data in Telegram chats
+- Privacy controls for sharing features
+
+### Stories
+- Auto-creation of Telegram stories with user statistics
+- User maintains control over publishing and customizing the stories
+
+### User Guides
+- Step-by-step guides for using mini-applications
+- Visual instructions with screenshots and descriptions
+
+### Monetization
+- Donation system for free services
+- Subscription plans for premium features
+- Digital content marketplace with partner programs
+
+## Payment Systems
+- Direct payments through Telegram Stars
+- Local payment systems (e.g., Payme) for UZS payments
+- Future support for international payment systems (Visa/MasterCard)
+
+## Mini Applications
+
+1. **Har Kun: Tasbeeh** - Prayer counter, Islamic calendar, prayer times
+2. **Har Kun: Hisob** - Financial tracking and management
+3. **Har Kun: Mashg'ulot** - Exercise and activity planning
+4. **Har Kun: Ta'lim** - Educational materials and courses
+5. **Har Kun: Taomnoma** - Recipes and meal planning
+6. **Har Kun: Kutubxona** - Digital library and reading materials
+7. **Har Kun: Intizom** - Task and habit management
+8. **Har Kun: Tabobat** - Health and wellness tracking
+9. **Har Kun: Fayllar** - File storage and management
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
 ```
-git clone https://github.com/username/har-kun.git
+git clone https://github.com/your-username/har-kun.git
 cd har-kun
 ```
 
-2. Установить зависимости:
+2. Install dependencies:
 ```
-pip install -r requirements.txt
-```
-
-3. Запустить приложение:
-```
-streamlit run app.py
+npm install
+# or
+yarn install
 ```
 
-## Структура проекта
-
+3. Create a `.env` file with the following variables:
 ```
-har-kun/
-├── app.py              # Основной файл приложения
-├── requirements.txt    # Зависимости проекта
-├── README.md           # Документация
-├── css/                # Стили CSS
-│   └── style.css       # Основной файл стилей
-├── assets/             # Статические ресурсы (изображения, иконки)
-└── apps/               # Модули приложений
-    ├── tasbeeh/        # Приложение Tasbeeh
-    ├── hisob/          # Приложение Hisob
-    └── ...             # Другие приложения
+REACT_APP_API_URL=http://localhost:8000/api
 ```
 
-## Адаптивность
+4. Start the development server:
+```
+npm start
+# or
+yarn start
+```
 
-Приложение адаптировано для работы на различных устройствах:
-- Мобильные телефоны
-- Планшеты
-- Компьютеры
+## Development Roadmap
 
-## Разработка
+1. Phase 1: Develop and release Har Kun: Tasbeeh
+2. Phase 2: Add Har Kun: Hisob and Har Kun: Mashg'ulot
+3. Phase 3: Add remaining mini-applications
+4. Phase 4: Enhance community features and monetization
 
-Для добавления нового приложения:
+## Tech Stack
 
-1. Создайте новую папку в директории `apps/`
-2. Создайте файлы `__init__.py` и `app.py` в этой папке
-3. Определите функцию `app()` в файле `app.py`
-4. Добавьте информацию о приложении в словарь `APPS` в файле `app.py`
+- React
+- Ant Design
+- Telegram Mini App API
+- Axios for API calls
+- i18next for internationalization
+- Firebase for backend (optional)
 
-## Контакт
+## License
 
-Для получения дополнительной информации о проекте, пожалуйста, свяжитесь с [email@example.com].
+This project is proprietary and confidential. Unauthorized copying, use, distribution, or modification is strictly prohibited.
+
+## Contact
+
+For any inquiries, please contact [your-email@example.com](mailto:your-email@example.com)
